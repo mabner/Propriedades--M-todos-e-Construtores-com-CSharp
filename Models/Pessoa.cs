@@ -7,10 +7,36 @@ namespace ExemploExplorando.Models
 {
     public class Pessoa
     {
-        public string Name { get; set; }
-        public int Age { get; set; }
+        private string _name;
+        public string Name
+        {
+            get { return _name.ToUpper(); }
+            set
+            {
+                if (value == "")
+                {
+                    throw new ArgumentException("O nome não pode ser vazio.");
+                }
+                _name = value;
+            }
+        }
 
-        public void Apresentar(){
+        private int _age;
+        public int Age
+        {
+            get { return _age; }
+            set
+            {
+                if (value < 0)
+                {
+                    throw new ArgumentOutOfRangeException("A idade não pode ser negativa");
+                }
+                _age = value;
+            }
+        }
+
+        public void Apresentar()
+        {
             Console.WriteLine($"Nome: {Name}, Idade: {Age}");
         }
     }
