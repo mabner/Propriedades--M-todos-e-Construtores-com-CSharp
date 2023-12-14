@@ -10,7 +10,7 @@ namespace ExemploExplorando.Models
         private string _name;
         public string Name
         {
-            get { return _name.ToUpper(); }
+            get => _name.ToUpper();
             set
             {
                 if (value == "")
@@ -24,7 +24,7 @@ namespace ExemploExplorando.Models
         private int _age;
         public int Age
         {
-            get { return _age; }
+            get => _age;
             set
             {
                 if (value < 0)
