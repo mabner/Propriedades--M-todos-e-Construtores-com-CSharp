@@ -27,10 +27,10 @@ namespace ExemploExplorando.Models
             get => _age;
             set
             {
-                if (value < 0)
-                {
-                    throw new ArgumentOutOfRangeException("A idade não pode ser negativa");
-                }
+                ArgumentOutOfRangeException.ThrowIfNegative(
+                    value,
+                    "A idade não pode ser menor do que zero."
+                );
                 _age = value;
             }
         }
