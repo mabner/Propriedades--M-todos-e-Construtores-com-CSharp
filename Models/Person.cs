@@ -7,6 +7,18 @@ namespace ExploringCSharp.Models
 {
     public class Person
     {
+        // Default constructor
+        public Person()
+        {
+        }
+
+        // Custom constructor
+        public Person(string name, string surname)
+        {
+            Name = name;
+            Surname = surname;
+        }
+
         private string _name;
         private int _age;
 
@@ -19,6 +31,7 @@ namespace ExploringCSharp.Models
                 {
                     throw new ArgumentException("The name field must not be empty.");
                 }
+
                 _name = value;
             }
         }
