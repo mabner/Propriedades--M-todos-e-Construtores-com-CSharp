@@ -1,8 +1,8 @@
-﻿using ExemploExplorando.Models;
+﻿using ExploringCSharp.Models;
 
-Pessoa p1 = new Pessoa();
+Person p1 = new Person();
 
 p1.Name = "Marcos";
 p1.Surname = "Leite";
 p1.Age = 36;
-p1.Apresentar();
+p1.Present();

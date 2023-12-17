@@ -3,9 +3,9 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 
-namespace ExemploExplorando.Models
+namespace ExploringCSharp.Models
 {
-    public class Pessoa
+    public class Person
     {
         private string _name;
         private int _age;
@@ -17,7 +17,7 @@ namespace ExemploExplorando.Models
             {
                 if (value == "")
                 {
-                    throw new ArgumentException("O nome não pode ser vazio.");
+                    throw new ArgumentException("The name field must not be empty.");
                 }
                 _name = value;
             }
@@ -33,15 +33,15 @@ namespace ExemploExplorando.Models
             {
                 ArgumentOutOfRangeException.ThrowIfNegative(
                     value,
-                    "A idade não pode ser menor do que zero."
+                    "The age cannot be a negative number."
                 );
                 _age = value;
             }
         }
 
-        public void Apresentar()
+        public void Present()
         {
-            Console.WriteLine($"Nome: {FullName}, Idade: {Age}");
+            Console.WriteLine($"Name: {FullName}, Age: {Age}");
         }
     }
 }

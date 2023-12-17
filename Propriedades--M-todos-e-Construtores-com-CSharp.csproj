@@ -3,9 +3,10 @@
   <PropertyGroup>
     <OutputType>Exe</OutputType>
     <TargetFramework>net8.0</TargetFramework>
-    <RootNamespace>ExemploExplorando</RootNamespace>
+    <RootNamespace>ExploringCSharp</RootNamespace>
     <ImplicitUsings>enable</ImplicitUsings>
     <Nullable>disable</Nullable>
+    <Authors>Marcos Leite</Authors>
   </PropertyGroup>
 
 </Project>
