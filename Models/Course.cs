@@ -25,5 +25,13 @@ namespace ExploringCSharp.Models
         {
             return Students.Remove(student);
         }
+
+        public void ListStudents()
+        {
+            foreach (Person student in Students)
+            {
+                Console.WriteLine(student.FullName);
+            }
+        }
     }
 }
