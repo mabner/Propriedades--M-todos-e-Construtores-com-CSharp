@@ -28,6 +28,7 @@ namespace ExploringCSharp.Models
 
         public void ListStudents()
         {
+            Console.WriteLine($"Students enrolled in: {Name}");
             foreach (Person student in Students)
             {
                 Console.WriteLine(student.FullName);
