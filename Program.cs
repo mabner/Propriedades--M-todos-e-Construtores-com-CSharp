@@ -20,3 +20,10 @@ CultureInfo.DefaultThreadCurrentCulture = new CultureInfo("pt-BR");
 decimal exchangeRate = 6.40M;
 Console.WriteLine($"{exchangeRate:C}");
 Console.WriteLine(exchangeRate.ToString("C", CultureInfo.CreateSpecificCulture("en-GB")));
+
+double successRate = .9682;
+System.Console.WriteLine(successRate.ToString("P"));
+
+int agencyCode = 153694;
+System.Console.WriteLine(agencyCode.ToString("##-##-##"));
+
