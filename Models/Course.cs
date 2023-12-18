@@ -29,9 +29,10 @@ namespace ExploringCSharp.Models
         public void ListStudents()
         {
             Console.WriteLine($"Students enrolled in: {Name}");
-            foreach (Person student in Students)
+
+            for (int count = 0; count < Students.Count; count++)
             {
-                Console.WriteLine(student.FullName);
+                Console.WriteLine($"ID: {count+1} {Students[count].FullName}");
             }
         }
     }
