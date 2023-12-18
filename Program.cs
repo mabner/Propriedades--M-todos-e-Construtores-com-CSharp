@@ -1,4 +1,5 @@
-﻿using ExploringCSharp.Models;
+﻿using System.Globalization;
+using ExploringCSharp.Models;
 
 Person p1 = new Person("Marcos", "Leite");
 
@@ -13,3 +14,9 @@ englishCourse.AddStudent(p1);
 englishCourse.AddStudent(p2);
 englishCourse.ListStudents();
 
+// Currency format
+CultureInfo.DefaultThreadCurrentCulture = new CultureInfo("pt-BR");
+
+decimal exchangeRate = 6.40M;
+Console.WriteLine($"{exchangeRate:C}");
+Console.WriteLine(exchangeRate.ToString("C", CultureInfo.CreateSpecificCulture("en-GB")));
