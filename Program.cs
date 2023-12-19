@@ -48,5 +48,13 @@ if (correctDate)
 }
 else
 {
+
     System.Console.WriteLine("Please review your region datetime format.");
+}
+
+string[] configLines = File.ReadAllLines("files/dateConfig.txt");
+
+foreach (string line in configLines)
+{
+	System.Console.WriteLine(line);	
 }
