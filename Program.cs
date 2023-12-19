@@ -48,13 +48,32 @@ if (correctDate)
 }
 else
 {
-
     System.Console.WriteLine("Please review your region datetime format.");
 }
 
-string[] configLines = File.ReadAllLines("files/dateConfig.txt");
-
-foreach (string line in configLines)
+try
 {
-	System.Console.WriteLine(line);	
+    string[] configLines = File.ReadAllLines("files/dateConfig.txt");
+
+    foreach (string line in configLines)
+    {
+        System.Console.WriteLine(line);
+    }
+}
+catch (FileNotFoundException ex)
+{
+    System.Console.WriteLine($"Please verify the filename. {ex.Message}");
+}
+catch (DirectoryNotFoundException ex)
+{
+    System.Console.WriteLine($"Please verify the folder name and file path. {ex.Message}");
+}
+catch (Exception ex)
+{
+    System.Console.WriteLine(ex);
+}
+finally
+{
+    // E.g. use to close a database connection irrespective of success in the try code block
+    System.Console.WriteLine("Debugging in progress...");
 }
