@@ -27,3 +27,7 @@ System.Console.WriteLine(successRate.ToString("P"));
 int agencyCode = 153694;
 System.Console.WriteLine(agencyCode.ToString("##-##-##"));
 
+DateTime enrolmentDate = DateTime.Now;
+
+System.Console.WriteLine(enrolmentDate.ToString(@"dddd, dd \de MMMM \de yyyy"));
+
